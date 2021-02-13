@@ -60,13 +60,4 @@ public class ProdutoTest {
 		livro.setPreco(10.9);
 		Assertions.assertEquals(10.9, livro.getPreco());
 	}
-	
-//	@Test
-//	public void assertionComHamcrestMatcher() {
-//		assertThat(livro.getPreco(), equalTo(100.00));
-//		assertThat(livro.getNome(), notNullValue());
-//		assertThat(livro.getNome(), containsString("Teste"));
-//		assertThat(livro, instanceOf(Produto.class));
-//	}
-
 }

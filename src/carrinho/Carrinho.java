@@ -42,6 +42,4 @@ public class Carrinho {
 	public void esvazia() {
 		items.clear();
 	}
-	
-
 }
