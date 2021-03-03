@@ -19,6 +19,11 @@ public class BilletProcessor {
 	}
 	
 	public double getSumPaymentsValue(ArrayList<Payment> paymentList) {
-		return 1500.00;
+		double totalValue = 0;
+
+		for (Payment payment: paymentList)
+			totalValue += payment.getValuePayed();
+		
+		return totalValue;
 	}
 }

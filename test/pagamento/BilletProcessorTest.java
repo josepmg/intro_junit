@@ -50,6 +50,7 @@ public class BilletProcessorTest {
 	public void testGetSumPaymentsValue() {
 		double expected = 0;
 		billetList.add(new Billet("0010001111001001000001", new Date(), 1500.00));
+		billetList.add(new Billet("0010001111001001000001", new Date(), 1000.00));
 		
 		for (Billet billet: billetList) {
 			expected += billet.getValue();
