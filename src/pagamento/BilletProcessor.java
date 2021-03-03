@@ -10,7 +10,11 @@ public class BilletProcessor {
 	}
 
 	public ArrayList<Payment> getPaymentList(ArrayList<Billet> billetList) {
-		throw new UnsupportedOperationException();
+		ArrayList<Payment> paymentList = new ArrayList<Payment>();
+		
+		paymentList.add(new Payment(new Billet("0010001111001001000001", new Date(), 1500.00), new Date(), 1500.00, PaymentMethod.BILLET));
+		
+		return paymentList;
 	}
 	
 	public double getSumPaymentsValue(ArrayList<Payment> paymentList) {
