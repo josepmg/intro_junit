@@ -12,7 +12,8 @@ public class BilletProcessor {
 	public ArrayList<Payment> getPaymentList(ArrayList<Billet> billetList) {
 		ArrayList<Payment> paymentList = new ArrayList<Payment>();
 		
-		paymentList.add(new Payment(new Billet("0010001111001001000001", new Date(), 1500.00), new Date(), 1500.00, PaymentMethod.BILLET));
+		for (Billet billet : billetList)
+			paymentList.add(new Payment(billet, new Date(), billet.getValue(), PaymentMethod.BILLET));
 		
 		return paymentList;
 	}
