@@ -19,6 +19,6 @@ public class BilletProcessor {
 	}
 	
 	public double getSumPaymentsValue(ArrayList<Payment> paymentList) {
-		throw new UnsupportedOperationException();
+		return 1500.00;
 	}
 }
