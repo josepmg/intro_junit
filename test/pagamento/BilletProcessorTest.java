@@ -44,5 +44,22 @@ public class BilletProcessorTest {
 
 		Assertions.assertEquals(expected, totalValue);
 	}
+	
+	@DisplayName("Testa o somatório da lista de pagamentos")
+	@Test
+	public void testGetSumPaymentsValue() {
+		double expected = 0;
+		billetList.add(new Billet("0010001111001001000001", new Date(), 1500.00));
+		
+		for (Billet billet: billetList) {
+			expected += billet.getValue();
+		}
+		
+		ArrayList<Payment> paymentList = billetProcessor.getPaymentList(billetList);
+		
+		
+		Assertions.assertEquals(expected, billetProcessor.getSumPaymentsValue(paymentList));
+	}
+	
 
 }
